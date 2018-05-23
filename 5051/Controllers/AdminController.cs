@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Collections.Generic;
 using _5051.Models;
 using _5051.Backend;
 
@@ -26,12 +27,27 @@ namespace _5051.Controllers
         /// </summary>
         /// <returns>All the Students that can have a report</returns>
         // GET: Report
-        public ActionResult Report()
+        public ActionResult Report(string id = null)
         {
+
             // Load the list of data into the StudentList
-            var myDataList = StudentBackend.Index();
-            var StudentViewModel = new StudentViewModel(myDataList);
-            return View(StudentViewModel);
+           if(id == null)
+            {
+                var myDataList = StudentBackend.Index();
+                var StudentViewModel = new StudentViewModel(myDataList);
+                return View(StudentViewModel);
+            }
+               
+            else
+            {
+                var singleData = StudentBackend.Read(id);
+                List<StudentModel> singleList = new List<StudentModel>();
+                singleList.Add(singleData);
+                var StudentViewModel = new StudentViewModel(singleList);
+                return View(StudentViewModel);
+            }
+            
+           
         }
 
         // GET: Report
@@ -40,11 +56,15 @@ namespace _5051.Controllers
         /// </summary>
         /// <param name="id">Student ID to generate Report for</param>
         /// <returns>Report data</returns>
-        public ActionResult StudentReport(string id=null)
+        /**
+        public ActionResult Report(string id)
         {
-
-            return View();
-        }
+            var singleData = StudentBackend.Read(id);
+            List <StudentModel> singleList = new List<StudentModel>();
+            singleList.Add(singleData);
+            var StudentViewModel = new StudentViewModel(singleList);
+            return View(StudentViewModel);
+        }*/
 
         /// <summary>
         /// Calendar
