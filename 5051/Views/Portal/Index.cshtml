@@ -1,17 +1,15 @@
-﻿@model _5051.Models.StudentModel
-
-@{
+﻿@{
 
     ViewBag.Title = "Student Portal";
 }
 
-<h2>@Model.Name Welcome to your Student Portal</h2>
+<h2>Welcome to my Student Portal</h2>
 
 <div class="row text-center">
     <div class="col-sm-12">
         <div class="row text-center">
             <div class="col-sm-4">
-                <a href="~/Portal/Report/@Model.Id">
+                <a href="~/Portal/Report">
                     <img src="~/Content/img/PortalReports.png" />
                     <br />
                     <span>Reports</span>
@@ -19,7 +17,7 @@
             </div>
 
             <div class="col-sm-4">
-                <a href="~/Portal/House/@Model.Id">
+                <a href="~/Portal/House">
                     <img src="~/Content/img/PortalHouse.png" />
                     <br />
                     <span>House</span>
@@ -27,7 +25,7 @@
             </div>
 
             <div class="col-sm-4">
-                <a href="~/Shop/Index/@Model.Id">
+                <a href="~/Shop/Index">
                     <img src="~/Content/img/PortalStore.png" />
                     <br />
                     <span>Store</span>
@@ -38,7 +36,7 @@
         <div class="row text-center">
 
             <div class="col-sm-4">
-                <a href="~/Portal/Settings/@Model.Id">
+                <a href="~/Portal/Settings">
                     <img src="~/Content/img/PortalCustomize.png" />
                     <br />
                     <span>Customize</span>
@@ -46,7 +44,7 @@
             </div>
 
             <div class="col-sm-4">
-                <a href="~/Portal/Avatar/@Model.Id">
+                <a href="~/Portal/Avatar">
                     <img src="~/Content/img/PortalAvatars.png" />
                     <br />
                     <span>Avatars</span>
