@@ -3,7 +3,13 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    font-family: Lato
+    font-family: Lato, sans-serif;
+}
+
+h1 {
+    font-family: Catamaran;
+    font-size: 40px;
+    font-weight: 800;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -40,7 +46,7 @@ textarea {
     justify-content: space-around;
     -webkit-justify-content: space-around;
     width: 350px;
-    font-family: Arial, sans-serif;
+    font-family: Lato;
     font-size: 5em;
     line-height: 130px;
     color: black;
@@ -54,10 +60,9 @@ textarea {
 
 .masthead {
     min-height: 30rem;
-    position: relative;
-    display: table;
+    display: block;
     width: 100%;
-    height: 600px;
+    height: 550px;
     padding-top: 20rem;
     padding-bottom: 20rem;
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.jpg");
@@ -68,17 +73,15 @@ textarea {
     text-align: center;
 }
 
+    .studentnavicons {
+        position: absolute;
+        top: 60px;
+        right: 350px;
+        font-size: 12px;
+    }
 
-
-.studentnavicons {
-    position: absolute;
-    top: 60px;
-    right: 350px;
-    font-size: 12px;
+.container-fluid.main {
+    position: relative; /* To make the navbar positions relative to this container */
+    padding: 0;
 }
-
-.container-full {
-    margin: 0 auto;
-    width: 100%;
-}
-/*--------------End Fab5--------------*/
+    /*--------------End Fab5--------------*/
