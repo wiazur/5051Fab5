@@ -1,0 +1,25 @@
+﻿@model _5051.Models.StudentViewModel
+
+@{
+    ViewBag.Title = "Kiosk Mode - New Student Profile";
+}
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-1">
+		@Html.ActionLink("< Back", "Index", "Kiosk", null, new { @class = "btn btn-primary btn-sm" })</div>
+	</div>
+	<div class="row">
+		<div class="col"><img src="~/Content/img/KioskReg.png" class="img-responsive"></div>
+	</div>
+
+	<div class="row">
+		
+	  <div class="col-md-6"><button type="submit" class="btn btn-primary">Submit</button>
+	  <button type="reset" class="btn btn-primary">Reset</button></div>
+	  <div class="col-md-6"></div>
+    </div>
+
+</div>
+

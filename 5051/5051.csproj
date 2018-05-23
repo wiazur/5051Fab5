@@ -355,6 +355,12 @@
     <Content Include="Views\Admin\StudentReport.cshtml" />
     <Content Include="Views\Home\AvatarExample.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Kiosk\NewProfile.cshtml" />
+    <Content Include="Views\Portal\Accomplishments.cshtml" />
+    <Content Include="Views\Portal\FirstIndex.cshtml" />
+    <Content Include="Views\Portal\IndexNinaCopy - Copy.cshtml" />
+    <Content Include="Views\Portal\IndexNinaCopy.cshtml" />
+    <Content Include="Views\Portal\Market.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
