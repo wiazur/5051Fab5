@@ -1,12 +1,15 @@
-﻿body {
+﻿/* --------------Fab5 ----------------*/
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: Lato
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -28,3 +31,54 @@ textarea {
     display: inline-block;
     float: none;
 }
+
+#clock {
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    height: 130px;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    width: 350px;
+    font-family: Arial, sans-serif;
+    font-size: 5em;
+    line-height: 130px;
+    color: black;
+}
+
+.unit {
+    height: 100%;
+    text-align: center;
+    width: 35%;
+}
+
+.masthead {
+    min-height: 30rem;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 600px;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+
+
+.studentnavicons {
+    position: absolute;
+    top: 60px;
+    right: 350px;
+    font-size: 12px;
+}
+
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+}
+/*--------------End Fab5--------------*/
