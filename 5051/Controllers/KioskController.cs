@@ -31,6 +31,18 @@ namespace _5051.Controllers
             return View(StudentViewModel);
         }
 
+        /// <summary>
+        /// For students to create a new profile at the Kiosk
+        /// </summary>
+        /// <returns></returns>
+        // GET: Kiosk
+        public ActionResult NewProfile()
+        {
+            var myDataList = StudentBackend.Index();
+            var StudentViewModel = new StudentViewModel(myDataList);
+            return View(StudentViewModel);
+        }
+
         // GET: Kiosk/SetLogout/5
         public ActionResult SetLogin(string id)
         {
