@@ -3,10 +3,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Welcome to the Admin Page</h2>
+<h2>WELCOME TO ADMIN PORTAL</h2>
 
 
-@Html.ActionLink("Avatar Editing", "Index", "Avatar", null, new { @class = "btn btn-primary" })
+@*@Html.ActionLink("Avatar Editing", "Index", "Avatar", null, new { @class = "btn btn-primary" })
 
 <br />
 <br />
@@ -18,4 +18,26 @@
 
 <br />
 <br />
-@Html.ActionLink("School Calendar", "Calendar", "Admin", null, new { @class = "btn btn-primary" })
+@Html.ActionLink("School Calendar", "Calendar", "Admin", null, new { @class = "btn btn-primary" })*@
+<div class="col-md-6">
+    <div>
+        <a id="adminReport" href="~/Admin/Report">
+            <img src="~/Content/img/defaultReportIcon.png" width="300" height="300" display: block;/>
+            <br />
+            <span display: block;>
+                View/Edit Reports
+            </span>
+        </a>
+    </div>
+    
+</div>
+<div class="col-md-6">
+    <a id="adminReport" href="~/Admin/Calendar">
+        <img src="~/Content/img/defaultCalendarIcon.png" width="300" height="300" display: block/>
+        <br />
+        <span display:block>
+            Override Calendar
+        </span>
+    </a>
+</div>
+
