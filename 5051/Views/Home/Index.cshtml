@@ -1,50 +1,48 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div class="container-full">
 
-<div class="jumbotron">
-    <h1>Welcome to Avatar Attendance</h1>
-    <p class="lead">Earn Points, Level up your Avatar all while attending class.</p>
-</div>
+    <!-- Header -->
+    <header class="masthead d-flex">
 
-<div class="row" style="padding:0;margin:0">
-    <div class="col-md-3">
-        <h2>Getting started</h2>
-        <p style="height:100px">
-            Each student earns points while attending class, and can use the points to level up their personal Avatar, or shop for items to decorate the Avatar's house.
-        </p>
-        <p>
-            @Html.ActionLink("Avatar Houses", "HouseExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
-    </div>
+        <h1>SUperNova</h1>
+        <h3>
+            <p><em></em>Earn Points, to update your avatar and stores to show off your collection!</em></p>
+        </h3>
 
-    <div class="col-md-3">
-        <h2>Level Up</h2>
-        <p style="height:100px">
-            Earn Bonus points to level up your Avatar. Higher level avatars can buy special items, as well as get daily discounts.
-        </p>
-        <p>
-            @Html.ActionLink("Choose Avatars", "AvatarExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
-    </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+                <p>
+                    Each student earns points while attending class, and can use the points to update their personal Avatar, create stores, buy and sell items
+                    to complete their collection.
+                </p>
+                <p>
+                    @Html.ActionLink("Avatar Houses", "HouseExample", "Home", null, new { @class = "btn btn-primary" })
+                </p>
+            </div>
 
-    <div class="col-md-3">
-        <h2>Shop</h2>
-        <p style="height:100px">
-            Go Shopping to get fantastic deals, and decorations.
-        </p>
-        <p>
-            @Html.ActionLink("Shop", "ShopExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
-    </div>
+            <div class="col-md-4">
+                <h2>Level up</h2>
+                <p>
+                    Earn Bonus points by showing up to class early or staying after school.
+                    The more points you have, the more you can do! You can expand all your stores by buying new items for the store.
+                </p>
+                <p>
+                    @Html.ActionLink("Store", "ShopExample", "Home", null, new { @class = "btn btn-primary" })
+                </p>
+            </div>
 
-    <div class="col-md-3">
-        <h2>Track Progress</h2>
-        <p style="height:100px">
-            View your attendance history, and track your progress over the school year.
-        </p>
-        <p>
-            @Html.ActionLink("Show Me", "StudentExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
-    </div>
+            <div class="col-md-4">
+                <h2>Track your Progress</h2>
+                <p>View your attendance history, and track your progress over the school year.</p>
+                <p>
+                    @Html.ActionLink("Show Me", "StudentExample", "Home", null, new { @class = "btn btn-primary" })
+                </p>
+            </div>
+        </div>
+        </div>
 </div>
