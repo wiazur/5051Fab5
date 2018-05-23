@@ -277,6 +277,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\5051 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Fab5-Staging - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\clock.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
