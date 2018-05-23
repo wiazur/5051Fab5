@@ -73,10 +73,10 @@ textarea {
     text-align: center;
 }
 
-    .studentnavicons {
-        position: absolute;
-        top: 60px;
-        right: 350px;
-        font-size: 12px;
-    }
+.studentnavicons {
+    position: absolute;
+    top: 60px;
+    right: 350px;
+    font-size: 12px;
+}
     /*--------------End Fab5--------------*/
