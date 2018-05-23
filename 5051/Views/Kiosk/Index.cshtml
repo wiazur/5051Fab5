@@ -4,9 +4,89 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Students</h2>
+
+<script>
+$(document).ready(function() {
+	$('#navigation a').hover(
+		function(){
+			var linkIndex = $(this).attr("data-filename");
+			$(this).addClass('hover');
+			$('.box img').attr('src', linkIndex);
+		}
+	);
+	});
+</script>
 
 <div class="container">
+
+    <div id="row">
+        <h1 class="text-center">Good Morning!</h1>
+        <h2 class="text-center">It's a great day in SUperNova today!</h2>
+    </div>
+
+    <div id="row">
+        <center>
+            <div id="clock">
+                <p class="unit" id="hours"></p>:
+                <p class="unit" id="minutes"></p>:
+                <p class="unit" id="seconds"></p>
+                <p class="unit" id="ampm"></p>
+                <script src="~/Scripts/clock.js"></script>
+            </div>
+        </center>
+    </div>
+		  
+	  <div class="col-md-6">
+
+	<div id="navigation" class="list-group">
+	<h3>Select your profile to login</h3>
+			@{
+		// Logged Out first
+		foreach (var item in Model.StudentList)
+		{
+			if (item.Status == _5051.Models.StudentStatusEnum.Out)
+			{
+					<a class="list-group-item" id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">@item.Name</a>
+			}
+		}
+	}
+	  </div>
+
+	  </div>
+	  <div class="col-md-6">
+
+		<div class="box">
+	  <img src="~/Content/img/PortalCustomize.png" width="200" height="200" class="img-responsive rounded mx-auto d-block" />
+	  </div>
+
+	  @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-primary btn-lg" })
+	  <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Login</button></div>
+
+	  <!-- Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+
+				<h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body text-center">
+				Login Successfully! <br>
+				You have earned 100 points from signing in today!
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+    </div>
+	
     <div class="row">
 
         @{
@@ -49,28 +129,8 @@
                 <br />
                 <br />
                 <div class="row">
-                    <h2>Logged Out</h2>
-                    @{
-                        // Logged Out first
-                        foreach (var item in Model.StudentList)
-                        {
-                            if (item.Status == _5051.Models.StudentStatusEnum.Out)
-                            {
-                                <div class="col-sm-2">
-                                    <a id="@item.Id" href="~/Kiosk/SetLogIn/@item.Id">
+                   
 
-                                        <div class="col-sm-1">
-                                            <img src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                            <br />
-                                            <span>
-                                                @item.Name
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            }
-                        }
-                    }
                 </div>
             }
         }
@@ -78,13 +138,4 @@
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
 
