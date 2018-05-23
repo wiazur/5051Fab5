@@ -12,7 +12,11 @@ $(document).ready(function() {
 			var linkIndex = $(this).attr("data-filename");
 			$(this).addClass('hover');
 			$('.box img').attr('src', linkIndex);
-		}
+        },
+        function () {
+            $(this).removeClass('hover');
+            $('.box img').attr('src', '/Content/img/defaultavatarX.png');
+        }
 	);
 	});
 </script>
@@ -56,7 +60,7 @@ $(document).ready(function() {
 	  <div class="col-md-6">
 
 		<div class="box">
-	  <img src="~/Content/img/PortalCustomize.png" width="200" height="200" class="img-responsive rounded mx-auto d-block" />
+	  <img src="~/Content/img/defaultavatarX.png" width="200" height="200"  class="img-responsive rounded" />
 	  </div>
 
 	  @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-primary btn-lg" })
@@ -85,7 +89,7 @@ $(document).ready(function() {
 		  </div>
 		</div>
 
-	
+	<div class="row"></div>
     <div class="row">
 
         @{
