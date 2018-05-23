@@ -4,9 +4,36 @@
     ViewBag.Title = "Reports";
 }
 
-<h2>Reports</h2>
+<script>
+    function changeImage() {
+        var img = document.getElementById("image");
+        img.src = "@Url.Content("~/Content/img/defaultEditAttendance.png")";
+        img.style.height = "200px";
+        img.style.width = "800px";
+        return false;
+    }
 
-<h3>Click on the Student to view their individual report</h3>
+</script>
+
+<div class="col-md-8">
+    <h2>Reports</h2>
+
+    <h3>Click on the Student to view/edit their individual report</h3>
+</div>
+    
+<div class="col-md-4">
+    @{
+        if (Model.StudentList.Count == 1)
+        {
+            @Html.ActionLink("Manage student info", "Read", "Student", new { id = Model.StudentList.ElementAt(0).Id }, new { @class = "btn btn-primary" })
+            @*@Html.ActionLink("Edit attendance", "Index", "Student", null, new { @class = "btn btn-primary" })*@
+            <a href="#" class="btn btn-primary" role="button" onclick="changeImage();">Edit attendance</a>
+        }
+     }
+
+
+</div>
+<br/>
 
 <div class="container">
     <div class="row text-center">
@@ -20,19 +47,43 @@
                 }
                 else
                 {
-                    foreach (var item in Model.StudentList)
-                    {
-                        <div class="col-sm-3">
-                            <a id="@item.Id" href="~/Admin/StudentReport/@item.Id">
-                                <img src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                <img src="~/Content/img/ChartPlaceholder.png" width="75" height="75" />
-                                <br />
-                                <span>
-                                    @item.Name
-                                </span>
-                            </a>
-                        </div>
-                    }
+                    <div class="col-md-4">
+                            <br/><br/>
+                            @foreach (var item in Model.StudentList)
+                            {
+                                <div class="col-md-6">
+                                    <a id="@item.Id" href="~/Admin/Report/@item.Id">
+                                        <img src="~/Content/img/@item.AvatarUri" width="40" height="50" />
+                                        <br />
+                                        <span>
+                                            @item.Name
+                                        </span>
+                                    </a>
+                                </div>
+                            }
+                    </div>
+                    <div class="col-md-8">
+                        <span class="pull-left">
+                            <label for="frDate">From date:</label>
+                            <input type="date" id="frInput" name="frInput">
+                            <label for="toDate">To date:</label>
+                            <input type="date" id="toInput" name="toInput">
+                        </span>
+                            <br\>
+                         <span class="pull-left">
+                             @if (Model.StudentList.Count > 1)
+                             {
+                                <img id="image" src="~/Content/img/totalGraph.png" width="600" height="300" />
+                             }
+                             else
+                             {
+                             
+                                <img id="image" src="~/Content/img/individualGraph.png" width="600" height="300" />
+                             }
+
+                         </span>
+                    </div>
+
                 }
             }
         </div>
