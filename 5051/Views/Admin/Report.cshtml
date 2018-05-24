@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Reports";
 }
-
-<script>
+<div class="container">
+    <script>
     function changeImage() {
         var img = document.getElementById("image");
         img.src = "@Url.Content("~/Content/img/defaultEditAttendance.png")";
@@ -13,42 +13,42 @@
         return false;
     }
 
-</script>
+    </script>
 
-<div class="col-md-8">
-    <h2>Reports</h2>
+    <div class="col-md-8">
+        <h2>Reports</h2>
 
-    <h3>Click on the Student to view/edit their individual report</h3>
-</div>
-    
-<div class="col-md-4">
-    @{
-        if (Model.StudentList.Count == 1)
-        {
-            @Html.ActionLink("Manage student info", "Read", "Student", new { id = Model.StudentList.ElementAt(0).Id }, new { @class = "btn btn-primary" })
-            @*@Html.ActionLink("Edit attendance", "Index", "Student", null, new { @class = "btn btn-primary" })*@
-            <a href="#" class="btn btn-primary" role="button" onclick="changeImage();">Edit attendance</a>
+        <h3>Click on the Student to view/edit their individual report</h3>
+    </div>
+
+    <div class="col-md-4">
+        @{
+            if (Model.StudentList.Count == 1)
+            {
+                @Html.ActionLink("Manage student info", "Read", "Student", new { id = Model.StudentList.ElementAt(0).Id }, new { @class = "btn btn-primary" })
+                @*@Html.ActionLink("Edit attendance", "Index", "Student", null, new { @class = "btn btn-primary" })*@
+                <a href="#" class="btn btn-primary" role="button" onclick="changeImage();">Edit attendance</a>
+            }
         }
-     }
 
 
-</div>
-<br/>
+    </div>
+    <br />
 
-<div class="container">
-    <div class="row text-center">
-        <div class="col-sm-12">
-            @{
-                if (Model.StudentList == null || !Model.StudentList.Any())
-                {
-                    <br />
-                    <p>No Students in the System</p>
-                    <br />
-                }
-                else
-                {
-                    <div class="col-md-4">
-                            <br/><br/>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12">
+                @{
+                    if (Model.StudentList == null || !Model.StudentList.Any())
+                    {
+                        <br />
+                        <p>No Students in the System</p>
+                        <br />
+                    }
+                    else
+                    {
+                        <div class="col-md-4">
+                            <br /><br />
                             @foreach (var item in Model.StudentList)
                             {
                                 <div class="col-md-6">
@@ -61,32 +61,32 @@
                                     </a>
                                 </div>
                             }
-                    </div>
-                    <div class="col-md-8">
-                        <span class="pull-left">
-                            <label for="frDate">From date:</label>
-                            <input type="date" id="frInput" name="frInput">
-                            <label for="toDate">To date:</label>
-                            <input type="date" id="toInput" name="toInput">
-                        </span>
+                        </div>
+                        <div class="col-md-8">
+                            <span class="pull-left">
+                                <label for="frDate">From date:</label>
+                                <input type="date" id="frInput" name="frInput">
+                                <label for="toDate">To date:</label>
+                                <input type="date" id="toInput" name="toInput">
+                            </span>
                             <br\>
-                         <span class="pull-left">
-                             @if (Model.StudentList.Count > 1)
-                             {
-                                <img id="image" src="~/Content/img/totalGraph.png" width="600" height="300" />
-                             }
-                             else
-                             {
-                             
-                                <img id="image" src="~/Content/img/individualGraph.png" width="600" height="300" />
-                             }
+                                <span class="pull-left">
+                                    @if (Model.StudentList.Count > 1)
+                                    {
+                                        <img id="image" src="~/Content/img/totalGraph.png" width="600" height="300" />
+                                    }
+                                    else
+                                    {
 
-                         </span>
-                    </div>
+                                        <img id="image" src="~/Content/img/individualGraph.png" width="600" height="300" />
+                                    }
 
+                                </span>
+                        </div>
+
+                    }
                 }
-            }
+            </div>
         </div>
     </div>
-</div>
 
