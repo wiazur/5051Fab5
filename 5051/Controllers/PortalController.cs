@@ -34,7 +34,7 @@ namespace _5051.Controllers
         /// </summary>
         /// <returns></returns>
         // GET: Portal
-        public ActionResult IndexNinaCopy()
+        public ActionResult Index()
         {
             return View();
         }
