@@ -30,8 +30,9 @@ namespace _5051.Controllers
         public ActionResult Report(string id = null)
         {
 
-            // Load the list of data into the StudentList
-           if(id == null)
+            // Load the list of data into the StudentList. If has ID, return one student's info
+            //Otherwise, return all
+           if(string.IsNullOrEmpty(id))
             {
                 var myDataList = StudentBackend.Index();
                 var StudentViewModel = new StudentViewModel(myDataList);
