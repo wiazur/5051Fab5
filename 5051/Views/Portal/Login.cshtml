@@ -2,10 +2,42 @@
     ViewBag.Title = "Login";
 }
 
-<div class="row text-center">
-    <a href="~/Portal/FirstIndex">
-        <img src="~/Content/img/studentGameLogin.png" width="800" />
-        <br />
-        <span class="h2">Click your name to get started</span>
-    </a>
-</div>
+<div class="container-full">
+    <header class="student-index">
+
+
+    </header>
+  
+       
+    
+        <div id="login">   
+          <h1>Welcome Back to Nova Town!</h1>
+          
+     
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+     
+ <!--Change login button to go to a different page -->    
+          <button type="button" onclick="~/Portal/FirstIndex">Log In</button>
+          
+         
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
