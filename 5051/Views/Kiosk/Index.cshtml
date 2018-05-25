@@ -6,19 +6,21 @@
 
 
 <script>
-$(document).ready(function() {
-	$('#navigation a').hover(
-		function(){
-			var linkIndex = $(this).attr("data-filename");
-			$(this).addClass('hover');
-			$('.box img').attr('src', linkIndex);
-        },
-        function () {
-            $(this).removeClass('hover');
-            $('.box img').attr('src', '/Content/img/defaultavatarX.png');
-        }
-	);
+    $(document).ready(
+    function () {
+        $('#navigation a').hover(
+            function () {
+                var linkIndex = $(this).attr("data-filename");
+                $(this).addClass('hover');
+                $('.box img').attr('src', linkIndex);
+            },
+            function () {
+                $(this).removeClass('hover');
+                $('.box img').attr('src', '/Content/img/defaultavatarX.png');
+            })
+        
 	});
+
 </script>
 
 <div class="container">
@@ -50,21 +52,26 @@ $(document).ready(function() {
 		{
 			if (item.Status == _5051.Models.StudentStatusEnum.Out)
 			{
-					<a class="list-group-item" id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">@item.Name</a>
+					<a class="list-group-item" id="@item.Name" href="#" data-filename="/Content/img/@item.AvatarUri">@item.Name</a>
+                
 			}
 		}
 	}
 	  </div>
 
 	  </div>
-	  <div class="col-md-6">
+      <div class="col-md-6">
 
-		<div class="box">
-	  <img src="~/Content/img/defaultavatarX.png" width="200" height="200"  class="img-responsive rounded" />
-	  </div>
+          <div class="box">
+              <img src="~/Content/img/defaultavatarX.png" width="200" height="200" class="img-responsive rounded" />
+          </div>
 
-	  @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-primary btn-lg" })
-	  <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Login</button></div>
+          @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-primary btn-lg" })
+          <div class="submitLink">
+              <a href="#" class="btn btn-primary btn-lg">Login</a>
+          </div>
+          <!--data-toggle="modal" data-target="#loginModal"-->
+      </div>
 
 	  <!-- Modal -->
 		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
