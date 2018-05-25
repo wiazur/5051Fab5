@@ -222,7 +222,21 @@ namespace _5051.Controllers
             return RedirectToAction("Index");
         }
 
+
+        /// <summary>
+        /// Display default game store page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Default()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Display community page
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Community()
         {
             return View();
         }
