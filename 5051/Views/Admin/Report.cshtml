@@ -4,6 +4,7 @@
     ViewBag.Title = "Reports";
 }
 <div class="container">
+    <!--script to switch between report and edit attendance table-->
     <script>
     function changeImage() {
         var img = document.getElementById("image");
@@ -16,9 +17,7 @@
     </script>
 
     <div class="col-md-8">
-        <h2>Reports</h2>
-
-        <h3>Click on the Student to view/edit their individual report</h3>
+        <h3>Reports</h3>
     </div>
 
     <div class="col-md-4">
@@ -26,7 +25,6 @@
             if (Model.StudentList.Count == 1)
             {
                 @Html.ActionLink("Manage student info", "Read", "Student", new { id = Model.StudentList.ElementAt(0).Id }, new { @class = "btn btn-primary" })
-                @*@Html.ActionLink("Edit attendance", "Index", "Student", null, new { @class = "btn btn-primary" })*@
                 <a href="#" class="btn btn-primary" role="button" onclick="changeImage();">Edit attendance</a>
             }
         }
@@ -49,17 +47,80 @@
                     {
                         <div class="col-md-4">
                             <br /><br />
-                            @foreach (var item in Model.StudentList)
-                            {
-                                <div class="col-md-6">
-                                    <a id="@item.Id" href="~/Admin/Report/@item.Id">
-                                        <img src="~/Content/img/@item.AvatarUri" width="40" height="50" />
-                                        <br />
-                                        <span>
-                                            @item.Name
-                                        </span>
-                                    </a>
-                                </div>
+                            @{
+                                if (Model.StudentList.Count == 1)
+                                {
+                                    var item = Model.StudentList.ElementAt(0);
+                                    <div class="row">
+                                            <div class="col-sm-5">
+                                                <img src="~/Content/img/@item.AvatarUri" width="40" height="50" />
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                               
+                                            </div>
+                                     </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(i => item.Name)
+                                            </div>
+                                            <div class="col-sm-2">
+                                                @Html.DisplayFor(i => item.Name)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(i=> item.AvatarName)
+                                            </div>
+                                            <div class="col-sm-2">
+                                                @Html.DisplayFor(i => item.AvatarName)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(i => item.AvatarDescription)
+                                            </div>
+                                            <div class="col-sm-2">
+                                                @Html.DisplayFor(i => item.AvatarDescription)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(i => item.AvatarLevel)
+                                            </div>
+                                            <div class="col-sm-2">
+                                                @Html.DisplayFor(i => item.AvatarLevel)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 text-right">
+                                                @Html.DisplayNameFor(i => item.Status)
+                                            </div>
+                                            <div class="col-sm-2">
+                                                @Html.DisplayFor(i => item.Status)
+                                            </div>
+                                        </div>
+                                }
+                                else
+                                {
+                                    foreach (var item in Model.StudentList)
+                                    {
+                                        <div class="col-md-6">
+                                            <a id="@item.Id" href="~/Admin/Report/@item.Id">
+                                                <img src="~/Content/img/@item.AvatarUri" width="40" height="50" />
+                                                <br />
+                                                <span>
+                                                    @item.Name
+                                                </span>
+                                            </a>
+                                        </div>
+                                    }
+                                }
                             }
                         </div>
                         <div class="col-md-8">
@@ -90,3 +151,4 @@
         </div>
     </div>
 
+</div>
