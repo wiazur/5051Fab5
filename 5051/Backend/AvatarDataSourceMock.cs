@@ -130,6 +130,8 @@ namespace _5051.Backend
         public void Initialize()
         {
             var count = 0;
+            Create(new AvatarModel("defaultavatarX.png", "Default", "Default", 1));
+            /**
             Create(new AvatarModel("avatar" + count++.ToString() +".png", "Police", "Happy Officer",1));
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Kunoichi", "Ninja Lady",2));
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Angry", "Angry, but happy",1));
@@ -140,6 +142,7 @@ namespace _5051.Backend
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Ninja", "Taste my Katana",2));
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Circus", "Swinging from the Trapeese",4));
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Chief", "I love to cook",4));
+            */
         }
     }
 }
