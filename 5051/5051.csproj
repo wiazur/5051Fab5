@@ -371,6 +371,8 @@
     <Content Include="Views\Portal\Accomplishments.cshtml" />
     <Content Include="Views\Portal\Market.cshtml" />
     <Content Include="Views\Student\Default.cshtml" />
+    <Content Include="Views\Portal\Logout.cshtml" />
+    <Content Include="Views\Student\Community.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,6 +5,12 @@
 
 }
 
+#container {
+    background-color: #fefbd8;
+    margin: 50px 0 auto;
+    padding: 30px;
+}
+
 html {
     overflow-y: scroll;
 }
@@ -21,7 +27,7 @@ a {
 }
 
     a:hover {
-        color: #138566;
+        color: #fefbd8;
     }
 
 .form {
@@ -38,6 +44,23 @@ h1 {
     color: #fff;
     font-weight: 300;
     margin: 0 0 40px;
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    color: #364c70;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+
 }
 
 label {
