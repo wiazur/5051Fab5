@@ -1,5 +1,8 @@
-﻿*, *:before, *:after {
+﻿@import "compass/css3";
+
+*, *:before, *:after {
     box-sizing: border-box;
+
 }
 
 html {
@@ -18,16 +21,16 @@ a {
 }
 
     a:hover {
-        color: #1ab188;
+        color: #138566;
     }
 
 .form {
-    background: rgba(97, 134, 133, .9);
+    background: #3e4444;
     padding: 40px;
     max-width: 600px;
     margin: 40px auto;
     border-radius: 4px;
-    box-shadow: 0 4px 10px 4px rgba(97, 134, 133, .3);
+    box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
 }
 
 h1 {
@@ -53,6 +56,20 @@ label {
         color: #1ab188;
     }
 
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+
+        label.active .req {
+            opacity: 0;
+        }
+
+    label.highlight {
+        color: #fff;
+    }
+
 input, textarea {
     font-size: 22px;
     display: block;
@@ -75,7 +92,6 @@ input, textarea {
 textarea {
     border: 2px solid #a0b3b0;
     resize: vertical;
-    overflow: auto;
 }
 
 .field-wrap {
@@ -112,15 +128,15 @@ textarea {
     color: #fff;
     transition: all 0.5s ease;
     -webkit-appearance: none;
+    display: block;
 }
 
     .button:hover, .button:focus {
-        background: #159270;
+        background: #138566;
     }
 
 .button-block {
     text-align: center;
-    display: block;
     width: 100%;
 }
 
