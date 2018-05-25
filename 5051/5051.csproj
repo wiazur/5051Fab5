@@ -241,6 +241,8 @@
     <Content Include="Content\img\defaultCalendarIcon.png" />
     <Content Include="Content\img\defaultCalendarX.PNG" />
     <Content Include="Content\img\defaultEditAttendance.PNG" />
+    <Content Include="Content\img\defaultFAvatar.jpg" />
+    <Content Include="Content\img\defaultMAvatar.JPG" />
     <Content Include="Content\img\defaultReportIcon.png" />
     <Content Include="Content\img\defaultRoomPic.PNG" />
     <Content Include="Content\img\GameIcon.png" />
@@ -279,6 +281,7 @@
     </Content>
     <None Include="Properties\PublishProfiles\5051 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Fab5-Staging - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Fab5-SUperNova - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\clock.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

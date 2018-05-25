@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/5051/Properties/PublishProfiles/Fab5-Staging - Web Deploy.pubxml
