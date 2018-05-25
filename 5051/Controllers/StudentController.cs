@@ -221,5 +221,10 @@ namespace _5051.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Default()
+        {
+            return View();
+        }
     }
 }
