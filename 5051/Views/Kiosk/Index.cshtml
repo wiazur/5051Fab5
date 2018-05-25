@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-
+<link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <script>
     $(document).ready(
     function () {
@@ -13,17 +13,20 @@
                 var linkIndex = $(this).attr("data-filename");
                 $(this).addClass('hover');
                 $('.box img').attr('src', linkIndex);
-            },
-            function () {
-                $(this).removeClass('hover');
-                $('.box img').attr('src', '/Content/img/defaultavatarX.png');
-            })
-        
+            }),
+            $('#navigation a').click(
+                function () {
+                    var linkIndex = $(this).attr("data-filename");
+                    $(this).addClass('hover');
+                    $('.box img').attr('src', linkIndex);
+                    $(".box p").text("You have selected" + $(this).text());
+                }
+            )
 	});
 
 </script>
 
-<div class="container">
+<div class="form">
 
     <div id="row">
         <h1 class="text-center">Good Morning!</h1>
@@ -41,37 +44,45 @@
             </div>
         </center>
     </div>
-		  
-	  <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
 
-	<div id="navigation" class="list-group">
-	<h3>Select your profile to login</h3>
-			@{
-		// Logged Out first
-		foreach (var item in Model.StudentList)
-		{
-			if (item.Status == _5051.Models.StudentStatusEnum.Out)
-			{
-					<a class="list-group-item" id="@item.Name" href="#" data-filename="/Content/img/@item.AvatarUri">@item.Name</a>
-                
-			}
-		}
-	}
-	  </div>
+            <h4>Select your profile to login</h4>
+            <div id="navigation" class="list-group">
 
-	  </div>
-      <div class="col-md-6">
+                @{
+                    // Logged Out first
+                    foreach (var item in Model.StudentList)
+                    {
+                        if (item.Status == _5051.Models.StudentStatusEnum.Out)
+                        {   
+                            <a class="list-group-item" id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri"><i class="glyphicon glyphicon-user"></i> @item.Name</a>
+                        }
+                    }
+                }
+            </div>
 
-          <div class="box">
-              <img src="~/Content/img/defaultavatarX.png" width="200" height="200" class="img-responsive rounded" />
-          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="box">
+            <center><img src="~/Content/img/defaultavatarX.png" width="200" height="200" />
+                <p></p>
+                </center>
+            
+            </div>
+        </div>
+    </div>
+    
+        <div class="row">
+            <div class="submitLink text-center">
+                @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-success" })
+                <a href="#" class="btn btn-success">Login</a>
+            </div>
+        </div>
 
-          @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-primary btn-lg" })
-          <div class="submitLink">
-              <a href="#" class="btn btn-primary btn-lg">Login</a>
-          </div>
+
           <!--data-toggle="modal" data-target="#loginModal"-->
-      </div>
+      
 
 	  <!-- Modal -->
 		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -97,7 +108,7 @@
 		</div>
 
 	<div class="row"></div>
-    <div class="row">
+    
 
         @{
             if (Model.StudentList == null || !Model.StudentList.Any())
@@ -111,7 +122,7 @@
                 // List out the Logged IN Students, then the Logged Out students
 
                 <div class="row">
-                    <h2>Logged In</h2>
+                    <h4>List of students Logged In</h4>
 
                     @{
                         // Logged IN first
@@ -147,5 +158,5 @@
 
     </div>
 
-</div>
+
 
