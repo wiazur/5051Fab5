@@ -130,8 +130,8 @@ namespace _5051.Backend
         public void Initialize()
         {
             var count = 0;
-            Create(new AvatarModel("defaultFAvatar.jpg", "fDefault", "fDefault", 1));
-            Create(new AvatarModel("defaultMAvatar.jpg", "mDefault", "mDefault", 1));
+            Create(new AvatarModel("defaultF1Avatar.png", "fDefault", "fDefault", 1));
+            Create(new AvatarModel("defaultM1Avatar.png", "mDefault", "mDefault", 1));
             /**
             Create(new AvatarModel("avatar" + count++.ToString() +".png", "Police", "Happy Officer",1));
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Kunoichi", "Ninja Lady",2));

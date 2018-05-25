@@ -225,6 +225,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\adminBackground.png" />
+    <Content Include="Content\img\adminBackground1.png" />
     <Content Include="Content\img\avatar0.png" />
     <Content Include="Content\img\avatar1.png" />
     <Content Include="Content\img\avatar2.png" />
@@ -241,7 +243,9 @@
     <Content Include="Content\img\defaultCalendarIcon.png" />
     <Content Include="Content\img\defaultCalendarX.PNG" />
     <Content Include="Content\img\defaultEditAttendance.PNG" />
+    <Content Include="Content\img\defaultF1Avatar.png" />
     <Content Include="Content\img\defaultFAvatar.jpg" />
+    <Content Include="Content\img\defaultM1Avatar.png" />
     <Content Include="Content\img\defaultMAvatar.JPG" />
     <Content Include="Content\img\defaultReportIcon.png" />
     <Content Include="Content\img\defaultRoomPic.PNG" />
