@@ -108,5 +108,14 @@ namespace _5051.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Display logout page
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Logout()
+        {
+            return View();
+        }
     }
 }
