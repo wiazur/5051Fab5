@@ -69,11 +69,23 @@ textarea {
     text-align: center;
 }
 
-.studentnavicons {
-    position: absolute;
-    top: 60px;
-    right: 350px;
-    font-size: 12px;
+#studentnavicons {
+    position: relative;
+    top: -700px;
+    left: 950px;
+}
+
+    #studentnavicons a {
+        font-size: 2.5em;
+        margin-left: 10px;
+    }
+
+
+#studentnaviconstext {
+    position: relative;
+    text-align:right;
+    top:-700px;
+    font-size: 16px;
 }
 
 .container-full {

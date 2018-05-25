@@ -4,24 +4,31 @@
 
     ViewBag.Title = "Game Portal";
 }
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script>
+    $(document).ready(
+    function () {
+        $('#studentnavicons a').hover(
+            function () {
+                $("#studentnaviconstext p").text($(this).attr("title"));
+            })
+	});
+
+</script>
 
 <div class="container">
-    <!--<h2 align="center">Welcome to my Student Portal</h2>-->
-
-    <head>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    </head>
-
-    <div class="container">
+    <h1 align="center">Welcome to your store</h1>
         <div class="row text-center">
-            <img src="~/Content/img/wireframe_student_index.png" width="700" />
+            <img src="~/Content/img/storeMockup.jpg" class="img-responsive" />
         </div>
-        <div class="studentnavicons">
-            <div style="font-size:2.5em; color:black">
-                <a href="~/Portal/Market"><i class="fas fa-shopping-cart"></i></a>
-                <a href="~/Portal/Accomplishments"><i class="fas fa-trophy"></i></a>
-                <a href="~/Portal/Avatar"><i class="fas fa-user"></i></a>
-            </div>
+        <div id="studentnavicons">
+            <a href="~/Portal/Market" title="Inventory"><i class="fas fa-archive"></i></a>
+            <a href="~/Portal/Market" title="Marketplace"><i class="fas fa-shopping-cart"></i></a>
+            <a href="~/Portal/Accomplishments" title="Accomplishments"><i class="fas fa-trophy"></i></a>
+            <a href="~/Portal/Avatar" title="Avatar"><i class="fas fa-user"></i></a>
+        </div>
+        <div id="studentnaviconstext">
+            <p></p>
         </div>
     </div>
 
