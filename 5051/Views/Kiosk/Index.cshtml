@@ -29,12 +29,8 @@
 <div class="form">
 
     <div id="row">
-        <h1 class="text-center">Good Morning!</h1>
-        <h2 class="text-center">It's a great day in SUperNova today!</h2>
-    </div>
-
-    <div id="row">
         <center>
+            <h1 class="text-center">Good Morning!</h1>
             <div id="clock">
                 <p class="unit" id="hours"></p>:
                 <p class="unit" id="minutes"></p>:
@@ -48,7 +44,7 @@
         <div class="col-md-6">
 
             <h4>Select your profile to login</h4>
-            <div id="navigation" class="list-group">
+            <div id="navigation" class="list">
 
                 @{
                     // Logged Out first
@@ -73,90 +69,91 @@
         </div>
     </div>
     
-        <div class="row">
-            <div class="submitLink text-center">
-                @Html.ActionLink("Create a new profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-success" })
-                <a href="#" class="btn btn-success">Login</a>
+    <div class="row">
+        <div class="col-md-6 text-left">
+            @Html.ActionLink("New profile", "NewProfile", "Kiosk", null, new { @class = "button button-block" })
             </div>
+        <div class="col-md-6">
+            <div class="submitLink text-center"><a href="#" data-toggle="modal" data-target="#loginModal" class="button button-block">Login</a>
+            </div>
+        </div>
         </div>
 
 
-          <!--data-toggle="modal" data-target="#loginModal"-->
-      
+                <!--data-toggle="modal" data-target="#loginModal"-->
+                <!-- Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
 
-	  <!-- Modal -->
-		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
 
-				<h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                Login Successfully! <br>
+                                You have earned 100 points from signing in today!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
-				</button>
-			  </div>
-			  <div class="modal-body text-center">
-				Login Successfully! <br>
-				You have earned 100 points from signing in today!
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-			  </div>
-			</div>
-		  </div>
-		</div>
+                <div class="row"></div>
 
-	<div class="row"></div>
-    
 
-        @{
-            if (Model.StudentList == null || !Model.StudentList.Any())
-            {
-                <br />
-                <p>No Students in the System</p>
-                <br />
-            }
-            else
-            {
-                // List out the Logged IN Students, then the Logged Out students
-
-                <div class="row">
-                    <h4>List of students Logged In</h4>
-
-                    @{
-                        // Logged IN first
-                        foreach (var item in Model.StudentList)
-                        {
-                            if (item.Status == _5051.Models.StudentStatusEnum.In)
-                            {
-                                <div class="col-sm-2">
-                                    <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
-                                        <div class="col-sm-1">
-                                            <img src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                            <br />
-                                            <span>
-                                                @item.Name
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            }
-                        }
+                @{
+                    if (Model.StudentList == null || !Model.StudentList.Any())
+                    {
+                        <br />
+                        <p>No Students in the System</p>
+                        <br />
                     }
-                </div>
+                    else
+                    {
+                        // List out the Logged IN Students, then the Logged Out students
 
-                <br />
-                <br />
-                <br />
-                <div class="row">
-                   
+                        <div class="row">
+                            <h4>List of students Logged In</h4>
 
-                </div>
-            }
-        }
+                            @{
+                                // Logged IN first
+                                foreach (var item in Model.StudentList)
+                                {
+                                    if (item.Status == _5051.Models.StudentStatusEnum.In)
+                                    {
+                                        <div class="col-sm-2">
+                                            <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
+                                                <div class="col-sm-1">
+                                                    <img src="~/Content/img/@item.AvatarUri" width="75" height="75" />
+                                                    <br />
+                                                    <span>
+                                                        @item.Name
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
 
-    </div>
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+
+
+                        </div>
+                    }
+                }
+
+            </div>
 
 
 

@@ -39,17 +39,14 @@ textarea {
 }
 
 #clock {
-    text-align: center;
     display: flex;
     display: -webkit-flex;
-    height: 130px;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-    width: 350px;
+    height: 100px;
+    width: 360px;
     font-family: Lato;
     font-size: 5em;
-    line-height: 130px;
-    color: black;
+    line-height: 5em;
+    color: navajowhite;
 }
 
 .unit {
