@@ -262,6 +262,7 @@
     <Content Include="Content\img\PortalLogin.png" />
     <Content Include="Content\img\PortalReports.png" />
     <Content Include="Content\img\PortalStore.png" />
+    <Content Include="Content\img\ReportPicture.png" />
     <Content Include="Content\img\ReportPic.png" />
     <Content Include="Content\img\ReportStudentMay.png" />
     <Content Include="Content\img\sitelogo.png" />
