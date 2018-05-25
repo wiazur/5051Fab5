@@ -128,10 +128,10 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new StudentModel("Minh", null));
-            Create(new StudentModel("Nina",null));
-            Create(new StudentModel("Winona", null));
-            Create(new StudentModel("Jonathan", null));
+            Create(new StudentModel("Minh", "Police"));
+            Create(new StudentModel("Nina", "Police"));
+            Create(new StudentModel("Winona", "Circus"));
+            Create(new StudentModel("Jonathan", "Ninja"));
         }
     }
 }
