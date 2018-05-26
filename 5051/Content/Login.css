@@ -1,5 +1,14 @@
-﻿*, *:before, *:after {
+﻿@import "compass/css3";
+
+*, *:before, *:after {
     box-sizing: border-box;
+
+}
+
+#container {
+    background-color: #fefbd8;
+    margin: 50px 0 auto;
+    padding: 30px;
 }
 
 html {
@@ -7,7 +16,6 @@ html {
 }
 
 body {
-    background: #fefbd8;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -18,25 +26,40 @@ a {
 }
 
     a:hover {
-        color: #1ab188;
+        color: #fefbd8;
     }
 
 .form {
-    background: rgba(97, 134, 133, .9);
+    background: #3e4444;
     padding: 40px;
     max-width: 600px;
-    margin: 40px auto;
+    margin: 50px auto;
     border-radius: 4px;
-    box-shadow: 0 4px 10px 4px rgba(97, 134, 133, .3);
+    box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
 }
-
-
 
 h1 {
     text-align: center;
     color: #fff;
     font-weight: 300;
     margin: 0 0 40px;
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    color: #364c70;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+
 }
 
 label {
@@ -78,10 +101,9 @@ input, textarea {
     background: none;
     background-image: none;
     border: 1px solid #a0b3b0;
-    color: #ffffff;
+    color: #fff;
     border-radius: 0;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
-
 }
 
     input:focus, textarea:focus {
@@ -116,7 +138,6 @@ textarea {
     }
 
 .button {
-    text-align: center;
     border: 0;
     outline: none;
     border-radius: 0;
@@ -129,14 +150,15 @@ textarea {
     color: #fff;
     transition: all 0.5s ease;
     -webkit-appearance: none;
+    display: block;
 }
 
     .button:hover, .button:focus {
-        background: #159270;
+        background: #138566;
     }
 
 .button-block {
-    display: block;
+    text-align: center;
     width: 100%;
 }
 

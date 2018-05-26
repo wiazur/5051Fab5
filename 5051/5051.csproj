@@ -256,6 +256,7 @@
     <Content Include="Content\img\dwaAvatar.png" />
     <Content Include="Content\img\GameIcon.png" />
     <Content Include="Content\img\headerbg.jpg" />
+    <Content Include="Content\img\headerbg.png" />
     <Content Include="Content\img\individualGraph.png" />
     <Content Include="Content\img\KioskLoginPanel.png" />
     <Content Include="Content\img\KioskReg.png" />
@@ -266,8 +267,10 @@
     <Content Include="Content\img\PortalLogin.png" />
     <Content Include="Content\img\PortalReports.png" />
     <Content Include="Content\img\PortalStore.png" />
+    <Content Include="Content\img\ReportPicture.png" />
     <Content Include="Content\img\ReportPic.png" />
     <Content Include="Content\img\ReportStudentMay.png" />
+    <Content Include="Content\img\sitelogo.png" />
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
@@ -372,10 +375,10 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Kiosk\NewProfile.cshtml" />
     <Content Include="Views\Portal\Accomplishments.cshtml" />
-    <Content Include="Views\Portal\FirstIndex.cshtml" />
-    <Content Include="Views\Portal\IndexNinaCopy - Copy.cshtml" />
-    <Content Include="Views\Portal\IndexNinaCopy.cshtml" />
     <Content Include="Views\Portal\Market.cshtml" />
+    <Content Include="Views\Student\Default.cshtml" />
+    <Content Include="Views\Portal\Logout.cshtml" />
+    <Content Include="Views\Student\Community.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,7 +1,8 @@
 ﻿/* --------------Fab5 ----------------*/
 
 body {
-    padding-top: 50px;
+    background: #fefbd8;
+    padding-top: 60px;
     padding-bottom: 20px;
     font-family: Lato, sans-serif;
 }
@@ -39,17 +40,13 @@ textarea {
 }
 
 #clock {
-    text-align: center;
     display: flex;
     display: -webkit-flex;
-    height: 130px;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-    width: 350px;
+    height: 100px;
+    width: 360px;
     font-family: Lato;
     font-size: 5em;
-    line-height: 130px;
-    color: black;
+    color: navajowhite;
 }
 
 .unit {
@@ -65,7 +62,7 @@ textarea {
     height: 550px;
     padding-top: 20rem;
     padding-bottom: 20rem;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.jpg");
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,11 +70,23 @@ textarea {
     text-align: center;
 }
 
-.studentnavicons {
-    position: absolute;
-    top: 60px;
-    right: 350px;
-    font-size: 12px;
+#studentnavicons {
+    position: relative;
+    top: -700px;
+    left: 950px;
+}
+
+    #studentnavicons a {
+        font-size: 2.5em;
+        margin-left: 10px;
+    }
+
+
+#studentnaviconstext {
+    position: relative;
+    text-align:right;
+    top:-700px;
+    font-size: 16px;
 }
 
 .container-full {
@@ -90,5 +99,23 @@ textarea {
     background-size: cover;
     
 
+}
+
+.nav > li > a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+a.navbar-brand {
+    background: url(../Content/img/sitelogo.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    margin-right: 20px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px; /* hides the link text */
 }
 /*--------------End Fab5--------------*/
