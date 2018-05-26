@@ -249,6 +249,11 @@
     <Content Include="Content\img\defaultMAvatar.JPG" />
     <Content Include="Content\img\defaultReportIcon.png" />
     <Content Include="Content\img\defaultRoomPic.PNG" />
+    <Content Include="Content\img\djhAvatar.png" />
+    <Content Include="Content\img\dmn1Avatar.png" />
+    <Content Include="Content\img\dmnAvatar.png" />
+    <Content Include="Content\img\dnnAvatar.png" />
+    <Content Include="Content\img\dwaAvatar.png" />
     <Content Include="Content\img\GameIcon.png" />
     <Content Include="Content\img\headerbg.jpg" />
     <Content Include="Content\img\individualGraph.png" />
